@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Monman11 Server Network</title>
+    <meta name="description" content="The Monman11 Reboot home page">
+    <meta name="keywords" content="Minecraft, Minecraft Servers, Monman11, Monman, Java Edition, Servers, Server Network">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://example.com/page">
+    <meta property="og:title" content="Monman11">
+    <meta property="og:description" content="The Monman11 Reboot home page">
+    <!--<meta property="og:image" content="https://example.com/image.jpg">-->
+    <meta property="og:url" content="https://monman11.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="filter">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Servers</a></li>
+                <li><a href="#">Forums</a></li>
+                <li><a href="#">Store</a></li>
+            </ul>
+        </nav>
+        <h1>MonarchMC</h1>
+        <p>A network of Minecraft servers for players of all ages!</p>
+    </header>
+    <main>
+			<hr>
+        <center><div style="color:rgb(23, 226, 158);font-weight: 600;"><h2 >Release Coming Soon</h2><br><div id="countdown"></div></div></center>
+
+        <section class="hero">
+            <h2>Welcome to MonMan11 Network</h2>
+            <p>Join thousands of players from around the world and experience the best Minecraft gameplay.</p>
+            <a href="#" class="button">Join Us</a>
+        </section>
+        <section class="servers">
+            <h2>Our Servers</h2>
+            <div class="server-card">
+                <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/72/Block_of_Gold_JE6_BE3.png" alt="Server 1">
+                <h3>Moncraft</h3>
+                <p>Survival server with economy and land claim plugins.</p>
+                <a href="#" class="button">Join Now</a>
+            </div>
+            <div class="server-card">
+                <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/25/Beacon_JE6_BE2.png" alt="Server 2">
+                <h3>OPSkyblock</h3>
+                <p>Skyblock server with custom islands and challenges.</p>
+                <a href="#" class="button">Join Now</a>
+            </div>
+            <div class="server-card">
+                <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/e/e7/Diamond_Pickaxe_JE3_BE3.png" alt="Server 3">
+                <h3>Prisons</h3>
+                <p>Our original prisons server experience with the latest updates</p>
+                <a href="#" class="button">Join Now</a>
+            </div>
+        </section>
+    </div>
+        <section class="forums">
+            <h2>Forums</h2>
+            <p>Join our community forums to discuss gameplay, share tips and tricks, and connect with other players.</p>
+            <a href="#" class="button">Go to Forums</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Monman11 Network</p>
+    </footer>
+    <script>
+ 
+const countDownDate = new Date("May 31, 2023 23:59:59").getTime();
+document.getElementById("countdown").innerHTML = "05/31/2023"
+const x = setInterval(function() {
+
+  const now = new Date().getTime();
+
+  const distance = countDownDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+    </script>
+</body>
+</html>
