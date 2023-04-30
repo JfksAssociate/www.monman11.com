@@ -7,7 +7,7 @@
 body {
     background-color: #2b2b2b;
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-image: url("assets/hub.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,12 +17,31 @@ body {
 .text-green {
     color:#00ff4c;
 }
+hr {
+	background-color: rgba(91, 197, 29, 0.664);
+	border: 0;
+	padding: 1.2px;
+    width: 50%;
+    justify-content: center;
+    animation: hr 0.9s forwards;
+}
+.release {
+    color:rgb(23, 226, 57);
+    font-weight: 600;
+    padding-top: 30px;
+    font-size: 140%;
+    line-height: 0.6;
+}
+.release div {
+    color: yellow;
+}
 .filter {
     background-color: rgba(0,0,0,.2);
 }
 header {
     padding: 2rem;
     text-align: center;
+    line-height: 2;
 }
 
 nav {
@@ -53,6 +72,9 @@ nav ul li a:hover {
 }
 #countdown {
     font-size: 20px;
+}
+#launch {
+    cursor: pointer;
 }
 h1, h2, h3 {
 font-weight: bold;
@@ -145,8 +167,11 @@ footer p {
 color: #fff;
 font-size: 1.2rem;
 }
-hr {
-	background-color: gray;
-	border: 0;
-	padding: 1.2px 20px;
+
+@keyframes hr {
+    from {
+        width: 0%;
+    } to {
+        width: 50%;
+    }
 }
