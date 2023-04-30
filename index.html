@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Monman11 Server Network</title>
-    <meta name="description" content="The Monman11 Reboot home page">
-    <meta name="keywords" content="Minecraft, Minecraft Servers, Monman11, Monman, Java Edition, Servers, Server Network">
-    <meta name="robots" content="noindex, nofollow">
-    <link rel="canonical" href="https://example.com/page">
-    <meta property="og:title" content="Monman11">
-    <meta property="og:description" content="The Monman11 Reboot home page">
-    <!--<meta property="og:image" content="https://example.com/image.jpg">-->
-    <meta property="og:url" content="https://monman11.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Server Network</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,13 +21,13 @@
         <p>A network of Minecraft servers for players of all ages!</p>
     </header>
     <main>
-			<hr>
-        <center><div style="color:rgb(23, 226, 158);font-weight: 600;"><h2 >Release Coming Soon</h2><br><div id="countdown"></div></div></center>
+        <center><hr></center>
+        <center><div class="release"><h2 >Release Coming Soon</h2><br><div id="countdown"></div></div></center>
 
         <section class="hero">
             <h2>Welcome to MonMan11 Network</h2>
             <p>Join thousands of players from around the world and experience the best Minecraft gameplay.</p>
-            <a href="#" class="button">Join Us</a>
+            <a id="launch" class="button" onclick="launch()">Play Monman11</a>
         </section>
         <section class="servers">
             <h2>Our Servers</h2>
@@ -70,23 +61,29 @@
         <p>&copy; 2023 Monman11 Network</p>
     </footer>
     <script>
- 
+ // Set the date to count down to
 const countDownDate = new Date("May 31, 2023 23:59:59").getTime();
 document.getElementById("countdown").innerHTML = "05/31/2023"
+// Update the countdown every 1 second
 const x = setInterval(function() {
 
+  // Get the current date and time
   const now = new Date().getTime();
 
+  // Calculate the time remaining
   const distance = countDownDate - now;
 
+  // Calculate days, hours, minutes, and seconds remaining
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+  // Display the countdown in the element with id="countdown"
   document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
+  // If the countdown is over, display a message
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("countdown").innerHTML = "EXPIRED";
@@ -94,5 +91,6 @@ const x = setInterval(function() {
 }, 1000);
 
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
