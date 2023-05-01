@@ -175,3 +175,9 @@ font-size: 1.2rem;
         width: 50%;
     }
 }
+@media (max-width: 767px) {
+body {
+
+    background-attachment: initial;
+
+}
