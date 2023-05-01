@@ -31,11 +31,12 @@ hr {
     animation: hr 0.9s forwards;
 }
 .release {
-    color:rgb(23, 226, 57);
+    color:rgb(8, 250, 29);
     font-weight: 600;
     padding-top: 30px;
     font-size: 140%;
     line-height: 0.8;
+
 }
 .release div {
     color: yellow;
@@ -98,7 +99,19 @@ text-align: center;
 font-size: 3rem;
 margin-bottom: 1rem;
 }
-
+.hero h2 span {
+    color: #ef0404; /* set the text color */
+    text-shadow: 2px 2px 1px #8c1d1d, 0 0 1px #fff, 0 0 4px #fff, 0 0 4px #f00, 0 0 6px #f00, 0 0 8px #f00, 0 0 10px #f00;
+    animation: neon 1s linear infinite alternate;
+}
+@keyframes neon {
+    0% {
+      text-shadow: 2px 2px 1px #8c1d1d, 0 0 1px #fff, 0 0 4px #fff, 0 0 4px #f00, 0 0 6px #f00, 0 0 8px #f00, 0 0 10px #f00;
+    }
+    100% {
+      text-shadow: 2px 2px 1px #8c1d1d, 0 0 1px #fff, 0 0 4px #fff, 0 0 4px #f22, 0 0 6px #f33, 0 0 8px #f44, 0 0 10px #f55;
+    }
+  }
 .hero p {
 font-size: 1.5rem;
 margin-bottom: 2rem;
@@ -198,13 +211,6 @@ nav {
       width: 100%;
       height: 110vh;
       background-position: 50% 0;
-    }
-    #container::before {
-      content: "";
-      display: block;
-      height: 100vh;
-      margin-top: -10vh;
-      pointer-events: none;
     }
     #container.scrolled::before {
       transform: translateY(-10%);
