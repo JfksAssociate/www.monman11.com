@@ -5,7 +5,7 @@ function launch() {
     e.innerText = "Copied!";
 }
 //JQUERY ios scrolling
-const isMobileiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+/*const isMobileiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 if (window.innerWidth <= 767 && isMobileiOS) {
     $('#container').css('background-size','cover');
     $('#container').css('width','100%');
@@ -13,7 +13,7 @@ if (window.innerWidth <= 767 && isMobileiOS) {
     $('#container').css('background-attachment','scroll');
 $(window).scroll(function() {
     var scrolledY = $(window).scrollTop();
-    $('#container').css('background-position', 'left ' + ((scrolledY)) + 'px');
+    $('#container').css('background-position', '50% ' + ((scrolledY)) + 'px');
 
   });
-}
+}*/
