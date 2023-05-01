@@ -6,9 +6,14 @@ function launch() {
 }
 //JQUERY ios scrolling
 const isMobileiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-if (window.innerWidth <= 767) {
+if (window.innerWidth <= 767 && isMobileiOS) {
+    $('#container').css('background-size','cover');
+    $('#container').css('width','100%');
+    $('#container').css('height','110vh');
+    $('#container').css('background-attachment','scroll');
 $(window).scroll(function() {
     var scrolledY = $(window).scrollTop();
     $('#container').css('background-position', 'left ' + ((scrolledY)) + 'px');
+
   });
 }
