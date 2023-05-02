@@ -1,108 +1,477 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>Monman11 Server Network</title>
-        <meta name="description" content="The Monman11 Reboot home page">
-        <meta name="keywords" content="Minecraft, Minecraft Servers, Monman11, Monman, Java Edition, Servers, Server Network, Monman11.com">
-        <meta name="robots" content="noindex, nofollow">
-        <link rel="canonical" href="https://monman11.com">
-        <meta property="og:title" content="Monman11">
-        <meta property="og:description" content="The Monman11 Reboot home page">
-        <meta property="og:image" content="https://www.dropbox.com/s/xtvljjk59vy27hb/server-icon.png?dl=1">
-        <meta property="og:url" content="https://monman11.com">
-        <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    </head>
-    <div id="wrapper">
-<body id="container">
-    <div class="filter">
-    <header>
-    
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#servers">Servers</a></li>
-                <li><a href="https://forums.monman11.com/">Forums</a></li>
-                <li><a href="https://store.monman11.com/">Store</a></li>
-            </ul>
-        </nav>
-        <center><hr></center>
-    </header>
-    <main>
-        
-        <center><div class="release"><h2 >Release Coming Soon</h2><br><div id="countdown"></div></div></center>
+<html>
 
-        <section class="hero">
-            <h2>Welcome to <span>MonMan11</span> Network</h2>
-            <p>Join thousands of players from around the world and experience the best Minecraft gameplay.</p>
-            <a id="launch" class="button" onclick="launch()">Play Monman11</a>
-        </section>
-        <section class="servers" id="servers">
-            <h2>Our Servers</h2>
-            <br> 
-            <div class="server-card">
-                <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/72/Block_of_Gold_JE6_BE3.png" alt="Server 1">
-                <h3>Moncraft</h3>
-                <p>Survival server with economy and land claim plugins.</p>
-                <a href="#" class="button">Join Now</a>
-            </div>
-            <div class="server-card">
-                <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/25/Beacon_JE6_BE2.png" alt="Server 2">
-                <h3>OPSkyblock</h3>
-                <p>Skyblock server with custom islands and challenges.</p>
-                <a href="#" class="button">Join Now</a>
-            </div>
-            <div class="server-card">
-                <img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/e/e7/Diamond_Pickaxe_JE3_BE3.png" alt="Server 3">
-                <h3>Prisons</h3>
-                <p>Our original prisons server experience with the latest updates</p>
-                <a href="#" class="button">Join Now</a>
-            </div>
-        </section>
+<head>
+  <!-- Required Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monman11 Network | Home</title>
+  <meta name="description" content="The Monman11 Reboot home page">
+  <meta name="keywords" content="Minecraft, Minecraft Servers, Monman11, Monman, Java Edition, Servers, Server Network, Monman11.com">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://monman11.com">
+  <meta property="og:title" content="Monman11">
+  <meta property="og:description" content="The Monman11 Reboot home page">
+  <meta property="og:image" content="https://www.dropbox.com/s/xtvljjk59vy27hb/server-icon.png?dl=1">
+  <meta property="og:url" content="https://monman11.com">
+  <!-- End Required Meta Tags -->
+
+  <!-- Start Required Links -->
+
+  <!-- https://fontawesome.com/ -->
+  <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+  <!-- https://bulma.io/ -->
+  <link rel="stylesheet" href="./assets/css/bulma.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://rawcdn.githack.com/akzhy/Vara/02d135d2864a976f6c70464aebee0f81647695c8/src/vara.min.js"></script>
+  
+  <!-- End Required Links -->
+</head>
+
+<body>
+  <!-- Start Navbar -->
+  <nav id="navbar" class="navbar fixed is-transparent" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <!-- Start Navbar Brand -->
+        <a class="navbar-item has-text-weight-bold server-name" href="index.html"></a>
+        <!-- End Navbar Brand -->
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+          data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <!-- Start Navbar Menu -->
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="index.html" class="navbar-item">
+            Home
+          </a>
+          <a href="#" class="navbar-item">
+            Servers
+          </a>
+          <a href="https://forums.monman11.com" class="navbar-item">
+            Forums
+          </a>
+          <a href="https://store.monman11.com" class="navbar-item">
+            Store
+          </a>
+          <a href="https://discord.gg/Gh2yJNQGWD" class="navbar-item">
+            Discord
+          </a>
+        </div>
+        <!-- Start Navbar End -->
+        <div class="navbar-end">
+          <a id="ip-button" class="navbar-item">
+            <strong class="has-text-primary server-ip is-uppercase"></strong>
+          </a>
+        </div>
+        <!-- End Navbar End -->
+      </div>
+      <!-- End Navbar Menu -->
     </div>
-        <section class="forums">
-            <h2>Forums</h2>
-            <p>Join our community forums to discuss gameplay, share tips and tricks, and connect with other players.</p>
-            <a href="#" class="button">Go to Forums</a>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Monman11 Network</p>
-    </footer>
-    <script>
- // Set the date to count down to
-const countDownDate = new Date("May 31, 2023 23:59:59").getTime();
-document.getElementById("countdown").innerHTML = "05/31/2023"
-// Update the countdown every 1 second
-const x = setInterval(function() {
+  </nav>
+  <!-- End Navbar -->
 
-  // Get the current date and time
-  const now = new Date().getTime();
+  <!-- Start Hero -->
+  <div class="filtered">
+  <section class="hero has-background-image is-fullheight ">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <!-- Start Hero Title <p class="title title-1 is-1 has-text-white server-name"></p>-->
+        
+        <div id="text-container"></div>
+        <div class="join">
+          <a class="joinbtn" onclick="launch()" id="launch"></a>
+        </div>
+        
+        <!-- End Hero Title -->
 
-  // Calculate the time remaining
-  const distance = countDownDate - now;
-
-  // Calculate days, hours, minutes, and seconds remaining
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the countdown in the element with id="countdown"
-  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the countdown is over, display a message
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown").innerHTML = "EXPIRED";
-  }
-}, 1000);
-
-    </script>
-    <script src="script.js"></script>
-</body>
+        <!-- Start Hero Subtitle -->
+        <center><div class="release"><h2 >Release Coming Soon</h2><br><div id="countdown"></div></div></center>
+        <!--
+        <p class="subtitle has-text-white join-msg">
+          Join <span class="tag is-white" id="server-online-count">0</span> others today at <span
+            class="has-text-weight-bold server-ip"></span>
+        </p>-->
+        <!-- End Hero Subtitle -->
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
 </div>
+  <!--  Start About Section -->
+  <section class="section is-medium has-text-centered">
+    <div class="container">
+      <!-- Start About Titles  -->
+      <h1 class="title">About the server</h1>
+      <h5 class="subtitle">Some of the features we're proud of</h5>
+      <!-- End About Titles -->
+      <div class="content">
+
+        <!-- Start About Icons Row 1 -->
+        <div class="columns has-huge-margin-top">
+
+          <!-- Start Icon 2 -->
+          <div class="column">
+            <div class="icon">
+              <i class="fas fa-users fa-4x has-text-primary"></i>
+            </div>
+            <div>
+              <h6 class="title is-6 has-medium-margin-top">Great Community</h6>
+            </div>
+          </div>
+          <!-- End Icon 2 -->
+
+          <!-- Start Icon 3 -->
+          <div class="column">
+            <div class="icon">
+              <i class="fas fa-calendar-alt fa-4x has-text-primary"></i>
+            </div>
+            <div>
+              <h6 class="title is-6 has-medium-margin-top">Fun Events</h6>
+            </div>
+          </div>
+          <!-- End Icon 3 -->
+
+        </div>
+        <!-- End About Icons Row 1 -->
+
+        <!-- Start About Icons Row 2 -->
+        <div class="columns has-large-margin-top">
+
+          <!-- Start Icon 4 -->
+          <div class="column">
+            <div class="icon">
+              <i class="fas fa-server fa-4x has-text-primary"></i>
+            </div>
+            <div>
+              <h6 class="title is-6 has-medium-margin-top">Community Inspired Servers</h6>
+            </div>
+          </div>
+          <!-- End Icon 4 -->
+
+          <!-- Start Icon 5 -->
+          <div class="column">
+            <div class="icon">
+              <i class="fas fa-plug fa-4x has-text-primary"></i>
+            </div>
+            <div>
+              <h6 class="title is-6 has-medium-margin-top">Custom Plugins</h6>
+            </div>
+          </div>
+          <!-- End Icon 5 -->
+
+          <!-- Start Icon 6 -->
+          <div class="column">
+            <div class="icon">
+              <i class="fas fa-star fa-4x has-text-primary"></i>
+            </div>
+            <div>
+              <h6 class="title is-6 has-medium-margin-top">Simply Amazing</h6>
+            </div>
+          </div>
+          <!-- End Icon 6 -->
+
+        </div>
+        <!-- End About Icons Row 2 -->
+
+      </div>
+    </div>
+  </section>
+  <!-- End About Section  -->
+
+  <!-- Start Call Call To Action Banner 1 -->
+  <section class="hero has-cta-background-image ">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title has-text-white">
+          What are you waiting for?
+        </h1>
+        <h2 class="subtitle has-text-white">
+          Come join us at <strong class="has-text-white server-ip"></strong>
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- Start Call Call To Action Banner 2 -->
+
+  <!-- Start Support The Server Section -->
+  <section class="section is-medium">
+    <div class="container has-text-centered">
+      <!-- Start Support The Server Titles -->
+      <h1 class="title">Support the server</h1>
+      <h5 class="subtitle">Because you <span class="has-text-danger">&hearts;</span> us</h5>
+      <!-- End Support The Server Titles -->
+      <a href="https://store.monman11.com">Monman11.com/store</a>
+    </div>
+  </section>
+  <!-- End Support The Server Section -->
+
+  <!-- Start Meet The Team Section -->
+  <section class="section is-light is-medium has-text-centered">
+    <div class="container">
+      <!-- Start Meet The Team Titles -->
+      <h1 class="title">Meet the team</h1>
+      <h5 class="subtitle">We're kind, we promise</h5>
+      <!-- End Meet The Team Titles -->
+      <div class="content">
+
+        <!-- Start Team Avatars Row 1 -->
+        <div class="columns has-large-margin-top">
+
+          <!-- Start Team Item 1 -->
+          <div class="column">
+            <img src="https://www.mc-heads.net/avatar/Stratfod/150" alt="Steve's head">
+            <h6 class="is-6 has-small-margin-top">Owner <span class="has-text-weight-normal">/ Stratfod</span></h6>
+          </div>
+          <!-- End Team Item 1 -->
+
+          <!-- Start Team Item 2 -->
+          <div class="column">
+            <img src="https://www.mc-heads.net/avatar/Nightpanda3/150" alt="Steve's head">
+            <h6 class="is-6 has-small-margin-top">Owner <span class="has-text-weight-normal">/ Nightpanda3</span></h6>
+          </div>
+          <!-- End Team Item 2 -->
+
+          <!-- Start Team Item 3 -->
+          <div class="column">
+            <img src="https://www.mc-heads.net/avatar/Monman11/150" alt="Steve's head">
+            <h6 class="is-6 has-small-margin-top">Founder <span class="has-text-weight-normal">/ Monman11</span></h6>
+          </div>
+          <!-- End Team Item 3 -->
+
+        </div>
+        <!-- Start Team Avatars Row 1 -->
+
+        <!-- Start Team Avatars Row 2 -->
+        <div class="columns">
+
+          <!-- Start Team Item 4 -->
+          <div class="column">
+            <img src="https://www.mc-heads.net/avatar/MashedPotato/150" alt="Steve's head">
+            <h6 class="is-6 has-small-margin-top">Network Manager <span class="has-text-weight-normal">/ MashedPotato</span></h6>
+          </div>
+          <!-- End Team Item 4 -->
+
+          <!-- Start Team Item 5 -->
+          <div class="column">
+            <img src="https://www.mc-heads.net/avatar/Ninjaplaysagain/150" alt="Steve's head">
+            <h6 class="is-6 has-small-margin-top">Manager <span class="has-text-weight-normal">/ Ninjaplaysagain</span></h6>
+          </div>
+          <!-- End Team Item 5 -->
+
+          <!-- Start Team Item 6 -->
+          <div class="column">
+            <img src="https://www.mc-heads.net/avatar/Redstoner_2019/150" alt="Steve's head">
+            <h6 class="is-6 has-small-margin-top">Developer <span class="has-text-weight-normal">/ Redstoner_2019</span></h6>
+          </div>
+          <!-- End Team Item 6 -->
+
+        </div>
+        <!-- Start Team Avatars Row 2 -->
+
+      </div>
+    </div>
+  </section>
+  <!-- End Meet The Team Section -->
+
+  <!-- Start Call To Action Banner 2 -->
+  <section class="hero has-gtc-background-image ">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title has-text-white">
+          Get to know the community
+        </h1>
+        <h2 class="subtitle has-text-white">
+          Join the <a href="http://forums.monman11.com" class="has-text-primary">forums</a> today!
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End Call To Action Banner 2 -->
+
+  <!-- Start Contact Section -->
+  <section class="section is-medium">
+    <div class="container">
+      <!-- Start Contact Titles  -->
+      <h1 class="title has-text-centered">Contact us</h1>
+      <h5 class="subtitle has-text-centered">In case you need our help</h5>
+      <!-- End About Titles  -->
+      <div class="content">
+
+        <!-- Start Row -->
+        <div class="columns has-large-margin-top">
+
+          <!-- Start Contact Info -->
+          <div class="column is-one-quarter">
+            <div class="card is-primary has-text-left">
+              <div class="card-content">
+                <div class="content">
+
+                  <!-- Start Contact Info Title -->
+                  <h4 class="has-text-white">Contact Info</h4>
+                  <!-- End Contact Info Title -->
+
+                  <!-- Start Contact Email -->
+                  <div>
+                    <span class="fa-stack">
+                      <i class="fas fa-circle fa-stack-2x has-text-dark"></i>
+                      <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span>
+                      <a class="has-text-white" href="mailto:contact@yourserver.com">contact@yourserver.com</a>
+                    </span>
+                  </div>
+                  <!-- End Contact Email -->
+
+                  <!-- Start Contact Email -->
+                  <div class="has-small-margin-top">
+                    <span class="fa-stack">
+                      <i class="fas fa-circle fa-stack-2x has-text-dark"></i>
+                      <i class="fas fa-globe-americas fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span>
+                      <a class="has-text-white" href="https://www.yourserver.com">www.yourserver.com</a>
+                    </span>
+                  </div>
+                  <!-- End Contact Email -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Contact Info -->
+
+          <!-- Start Contact Form -->
+          <div class="column">
+            <div class="card">
+              <div class="card-content">
+                <div class="content">
+
+                  <!-- Start Contact Form Title -->
+                  <h4>Drop us a message</h4>
+                  <!-- End Contact Form Title -->
+
+                  <!-- Start Form -->
+                  <form action="/action_page.php">
+
+                    <!-- Start Form Name -->
+                    <div class="field">
+                      <label class="label">Name</label>
+                      <div class="control">
+                        <input class="input" required="true" type="text" placeholder="John Doe">
+                      </div>
+                    </div>
+                    <!-- End Form Name -->
+
+                    <!-- Start Form Email -->
+                    <div class="field">
+                      <label class="label">Email</label>
+                      <div class="control">
+                        <input class="input" required="true" type="email" placeholder="john.doe@example.com">
+                      </div>
+                    </div>
+                    <!-- End Form Email -->
+
+                    <!-- Start Form Subject -->
+                    <div class="field">
+                      <label class="label">Subject</label>
+                      <div class="control">
+                        <input class="input" required="true" type="text"
+                          placeholder="Tell us what your message is about">
+                      </div>
+                    </div>
+                    <!-- End Form Subject -->
+
+                    <!-- Start Form Message -->
+                    <div class="field">
+                      <label class="label">Message</label>
+                      <div class="control">
+                        <textarea class="textarea" required="true" placeholder="Your full message here"></textarea>
+                      </div>
+                    </div>
+                    <!-- End Form Message -->
+
+                    <!-- Start Form Submit -->
+                    <div class="field is-grouped">
+                      <div class="control">
+                        <button class="button is-primary">Submit</button>
+                      </div>
+                    </div>
+                    <!-- End Form Submit -->
+
+                    <!-- End Form -->
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Contact Form -->
+        </div>
+        <!-- End Row -->
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Start Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Monman11.com &copy; 2019 &mdash; All rights
+          reserved
+        </strong>
+        <br>
+        <small>
+          <span class="server-name"></span>
+          Network is in no way affiliated with Mojang, AB.</small>
+      </p>
+      <a href="https://discord.gg/Gh2yJNQGWD">
+        <img width="50" src="https://static.vecteezy.com/system/resources/previews/018/930/718/original/discord-logo-discord-icon-transparent-free-png.png" alt="Discord Logo">
+      </a>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Include Scripts -->
+  <script>
+    // Set the date to count down to
+   const countDownDate = new Date("May 31, 2023 23:59:59").getTime();
+   document.getElementById("countdown").innerHTML = "05/31/2023"
+   // Update the countdown every 1 second
+   const x = setInterval(function() {
+   
+     // Get the current date and time
+     const now = new Date().getTime();
+   
+     // Calculate the time remaining
+     const distance = countDownDate - now;
+   
+     // Calculate days, hours, minutes, and seconds remaining
+     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+   
+     // Display the countdown in the element with id="countdown"
+     document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+     + minutes + "m " + seconds + "s ";
+   
+     // If the countdown is over, display a message
+     if (distance < 0) {
+       clearInterval(x);
+       document.getElementById("countdown").innerHTML = "EXPIRED";
+     }
+   }, 1000);
+   
+       </script>
+  <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/draw.js"></script>
+
+</body>
+
 </html>
