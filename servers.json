@@ -1,0 +1,28 @@
+{
+  "servers": [
+    {
+      "name": "Hub",
+      "description": "The Hub is the main lobby server where players can access all of the other servers on the network. It features portals to each of the other servers, as well as shops, minigames, and other fun activities."
+    },
+    {
+      "name": "Prison",
+      "description": "The Prison server is a classic prisons experience with PvP. Players start in a low-security prison and work their way up through the ranks by completing tasks and earning money. The higher the rank, the more privileges and access to resources they have."
+    },
+    {
+      "name": "Moncraft",
+      "description": "Moncraft is a survival server with plots and MCMMO. Players can claim a plot of land to build on and customize, and can also earn skills and abilities through the MCMMO plugin. The server is designed to encourage community building and cooperation."
+    },
+    {
+      "name": "Tweetcraft",
+      "description": "Tweetcraft is a unique MMORPG experience, updated from the original server. Players can choose from multiple races and classes, each with their own unique abilities and skills. The server features quests, dungeons, and other RPG-style gameplay elements."
+    },
+    {
+      "name": "Factions",
+      "description": "The Factions server offers a custom raiding experience with new items and mechanics. Players can team up with others to create and manage their own factions, raid other factions for resources, and compete in weekly events and challenges."
+    },
+    {
+      "name": "Creabuild",
+      "description": "Creabuild is a creative plots server with free VIP. Players can claim a plot of land to build on and showcase their creativity. The server also features a variety of tools and resources to help players build and create amazing things."
+    }
+  ]
+}
