@@ -48,22 +48,8 @@
 #text-container {
     margin: 20px auto;
     margin-top: 150px;
-  }
-  @keyframes new
-  {
-    0%
-    {
-      transform:scaleX(1);
-    }
-    50%
-    {
-      transform:scaleX(.95);
-    }
-    100%
-    {
-      transform:scaleX(1);
-    }
-  }
+}
+
   
 #text-container {
     color: #f51484;

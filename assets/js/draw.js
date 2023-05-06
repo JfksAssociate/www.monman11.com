@@ -1,24 +1,27 @@
  
     var fontSize = 55;
-    if(window.screen.width < 700) 
-      fontSize = 32;
-    else if(window.screen.width < 1200)
-      fontSize= 56;
+    if(window.screen.width < 800)  {
+      fontSize = 33;
+    }
+    else {
+      fontSize= 50;
+  }
     var vara = new Vara(
       "#text-container",
       "https://rawcdn.githack.com/akzhy/Vara/ed6ab92fdf196596266ae76867c415fa659eb348/fonts/Satisfy/SatisfySL.json",
       [
         {
           text: "Monman11.com",
+          x: 0,
           y: 0,
-          fromCurrentPosition: { y: false },
           duration: 1700,
           color: '#f20aa9',
           class: "neon-glow"
         },
         {
           text: "Join Us Today",
-          y: 100,
+          x: 0,
+          y: 20,
           color: "#fff",
           id: "right",
           color: '#f51484',
